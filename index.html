@@ -11,9 +11,12 @@
             align-items: center;
             justify-content: center;
             background-color: #000000; /* 여백 색상: 검정색 */
-            padding: 20px;
+            padding: 40px; /* 여백 조정 */
             color: white; /* 텍스트 색상도 흰색으로 설정 */
-            /* overflow: hidden; */ /* 스크롤 문제 해결을 위해 주석 처리 */
+        }
+        h1 {
+            font-size: 8vh; /* 화면 높이에 비례하여 글꼴 크기 조정 */
+            margin: 0; /* 마진 제거 */
         }
         img {
             margin: 0px 0; /* 이미지 간의 간격 */
@@ -33,16 +36,22 @@
             pointer-events: none; /* 클릭 이벤트를 무시하도록 설정 */
             z-index: 0; /* 눈송이가 이미지 아래에 있도록 설정 */
         }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 24px; /* 모바일에서 글꼴 크기 조정 */
+            }
+        }
     </style>
 </head>
 <body>
     <h1>TRACOWORLD. 초대장</h1>
 
     <!-- 메인 GIF 이미지 -->
-    <img src="images/메인.gif" alt="메인 GIF 이미지">
+    <img src="메인.gif" alt="메인 GIF 이미지">
 
     <!-- 다른 JPG 이미지 -->
-    <img src="images/내용.jpg" alt="다른 JPG 이미지">
+    <img src="내용.jpg" alt="다른 JPG 이미지">
 
     <script>
         function createSnowflake() {
