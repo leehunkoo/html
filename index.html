@@ -1,46 +1,32 @@
-<!doctype html>
-
-<html>
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <title>HTML Example</title>
-  
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/about.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인 GIF와 사진</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        img {
+            margin: 0px;
+            max-width: 45%; /* 화면 크기에 맞게 조정 */
+            height: auto; /* 비율 유지 */
+        }
+    </style>
 </head>
 <body>
-  <section class="center">
-    <aside class="sidebar"></aside>
-    
-    <section class="contents">
-      <!-- page will be include here -->
-      <section id="page" class="page">
-        <section id="about">
-          <section class="frame">
-            <h2><b>HELLO</b>WORLD</h2>
-            
-            <div class="cat">
-              <div class="picture">
-                <img src="images/mew.png" alt="Mew">
-              </div>
-              <small>Mew</small>
-            </div>
-            <div class="cat">
-              <div class="picture">
-                <img src="images/siesta.png" alt="Siesta">
-              </div>
-              <small>Siesta</small>
-            </div>
-            <div class="cat">
-              <div class="picture">
-                <img src="images/tiger.png" alt="Tiger">
-              </div>
-              <small>Tiger</small>
-            </div>
-          </section>
-        </section>
-      </section>
-    </section>
-  </section>
+    <h1>메인 GIF 파일과 사진</h1>
+
+    <!-- 메인 GIF 이미지 -->
+    <img src="https://mblogvideo-phinf.pstatic.net/MjAyNDEwMjVfMjMg/MDAxNzI5ODUzMDc5MzU3.0mXtB9gEPO7VA-u5P4Zzwz83PfY44XrPlQz3UpZV6Q8g.dKxpobnUBsz_cdZ4Kv2m_RlVFylbZaa38LxvLZL2vtUg.GIF/%EB%A9%94%EC%9D%B8.gif?type=mp4w800" alt="메인 GIF 이미지">
+
+    <!-- 다른 JPG 이미지 -->
+    <img src="http://dlgnsrn0672.ivyro.net/images/공지 내용.jpg" alt="다른 JPG 이미지">
 </body>
 </html>
