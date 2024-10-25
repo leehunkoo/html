@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>메인 GIF와 사진</title>
+    <title>TRACOWORLD. 초대장</title>
     <style>
         body {
             display: flex;
@@ -13,7 +13,7 @@
             background-color: #000000; /* 여백 색상: 검정색 */
             padding: 20px;
             color: white; /* 텍스트 색상도 흰색으로 설정 */
-            overflow: hidden; /* 눈송이 애니메이션이 바깥으로 나가지 않도록 설정 */
+            /* overflow: hidden; */ /* 스크롤 문제 해결을 위해 주석 처리 */
         }
         img {
             margin: 0px 0; /* 이미지 간의 간격 */
@@ -25,32 +25,32 @@
         }
         .snowflake {
             position: absolute;
-            color: white;
+            background-color: rgba(255, 255, 255, 0.7); /* 흐릿한 흰색 배경 */
+            border-radius: 50%; /* 동그라미 모양 */
+            width: 10px; /* 눈송이 크기 */
+            height: 10px; /* 눈송이 크기 */
             user-select: none; /* 선택할 수 없도록 설정 */
             pointer-events: none; /* 클릭 이벤트를 무시하도록 설정 */
-            font-size: 1.5em; /* 눈송이 크기 */
             z-index: 0; /* 눈송이가 이미지 아래에 있도록 설정 */
         }
     </style>
 </head>
 <body>
-    <h1>메인 GIF 파일과 사진</h1>
+    <h1>TRACOWORLD. 초대장</h1>
 
     <!-- 메인 GIF 이미지 -->
-    <img src="images/메인.gif" alt="메인 GIF 이미지">
+    <img src="메인.gif" alt="메인 GIF 이미지">
 
     <!-- 다른 JPG 이미지 -->
-    <img src="images/내용.jpg" alt="다른 JPG 이미지">
+    <img src="내용.jpg" alt="다른 JPG 이미지">
 
     <script>
         function createSnowflake() {
             const snowflake = document.createElement('div');
             snowflake.className = 'snowflake';
-            snowflake.innerHTML = '❄'; // 눈송이 문자
 
             // 랜덤 위치와 크기 설정
             snowflake.style.left = Math.random() * window.innerWidth + 'px';
-            snowflake.style.fontSize = Math.random() * 10 + 10 + 'px'; // 눈송이 크기 랜덤
             snowflake.style.top = '0px'; // 눈송이가 화면 맨 위에서 시작하도록 설정
 
             document.body.appendChild(snowflake);
@@ -60,7 +60,7 @@
             // 애니메이션 효과
             snowflake.animate([
                 { transform: 'translateY(0)', opacity: 1 },
-                { transform: 'translateY(100vh)', opacity: 0 }
+                { transform: 'translateY(100vh)', opacity: 0 } // 눈송이가 화면 아래로 떨어짐
             ], {
                 duration: fallDuration * 1000,
                 easing: 'linear',
